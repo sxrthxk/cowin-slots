@@ -45,20 +45,19 @@ function App() {
       getData();
     } else {
       url = `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id=${districtId}&date=${date}
-      `
+      `;
       async function getData() {
         var response = await axios.get(url);
         setCenterData(response.data.centers);
-      };
+      }
       getData();
-
     }
   }, [pincode, districtId]);
   console.log(centerData);
 
   const classes = useStyles();
   return (
-    <div>
+    <div className="rootDiv">
       {formType === "pincode" ? (
         <Container className={classes.container}>
           <Button
@@ -84,21 +83,30 @@ function App() {
           <StateListForm setDistrictId={assignDistrictId} />
         </Container>
       )}
-      {centerData.length ?
-        (<Container className={classes.containerData}>
-            <Divider className={classes.divider} variant="fullWidth" />
+      {centerData.length ? (
+        <Container className={classes.containerData}>
+          <Divider className={classes.divider} variant="fullWidth" />
 
           {centerData.map((data) => (
-            <React.Fragment  key={data.center_id}>
+            <React.Fragment key={data.center_id}>
               <CenterCard centerData={data} />
-            <Divider className={classes.divider} variant="fullWidth" />
+              <Divider className={classes.divider} variant="fullWidth" />
             </React.Fragment>
           ))}
-        </Container>)
-        :
-        (null)
-
-      }
+        </Container>
+      ) : null}
+      {/* <footer>
+        <Typography>
+          Hosted with 💘 on gh-pages.{" "}
+          <a
+            style={{ color: "skyblue" }}
+            href="https://github.com/sxrthxk/cowin-slots"
+          >
+            Click Here
+          </a>{" "}
+          for source code.
+        </Typography>
+      </footer> */}
     </div>
   );
 }
