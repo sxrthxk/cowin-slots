@@ -22,6 +22,7 @@ function App() {
   const [centerData, setCenterData] = useState([]);
   const [pincode, setPincode] = useState();
   const [districtId, setDistrictId] = useState();
+  const [isLoading, setIsLoading] = useState(true)
   const assignPincode = (p) => {
     setDistrictId(0);
     setPincode(p);
@@ -41,6 +42,7 @@ function App() {
       async function getData() {
         var response = await axios.get(url);
         setCenterData(response.data.centers);
+        setIsLoading(false)
       }
       getData();
     } else {
@@ -49,6 +51,8 @@ function App() {
       async function getData() {
         var response = await axios.get(url);
         setCenterData(response.data.centers);
+        setIsLoading(false)
+
       }
       getData();
     }
@@ -83,7 +87,7 @@ function App() {
           <StateListForm setDistrictId={assignDistrictId} />
         </Container>
       )}
-      {centerData.length ? (
+      {!isLoading ? (
         <Container className={classes.containerData}>
           <Divider className={classes.divider} variant="fullWidth" />
 

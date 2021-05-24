@@ -23,6 +23,7 @@ const CenterCard = ({ centerData }) => {
           )}
         </Typography>
         {centerData.fee_type === "Paid" ? (
+          centerData.vaccine_fees ? 
           <>
             {centerData.vaccine_fees.map((fee) => {
               return (
@@ -32,6 +33,7 @@ const CenterCard = ({ centerData }) => {
               );
             })}
           </>
+            : null
         ) : null}
 
         <Typography>
