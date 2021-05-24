@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/cowin-slots/static/css/main.d93e7a5a.chunk.css",
+    "main.js": "/cowin-slots/static/js/main.b21a5600.chunk.js",
+    "main.js.map": "/cowin-slots/static/js/main.b21a5600.chunk.js.map",
+    "runtime-main.js": "/cowin-slots/static/js/runtime-main.b03ef81c.js",
+    "runtime-main.js.map": "/cowin-slots/static/js/runtime-main.b03ef81c.js.map",
+    "static/js/2.5a52ed18.chunk.js": "/cowin-slots/static/js/2.5a52ed18.chunk.js",
+    "static/js/2.5a52ed18.chunk.js.map": "/cowin-slots/static/js/2.5a52ed18.chunk.js.map",
+    "index.html": "/cowin-slots/index.html",
+    "static/css/main.d93e7a5a.chunk.css.map": "/cowin-slots/static/css/main.d93e7a5a.chunk.css.map",
+    "static/js/2.5a52ed18.chunk.js.LICENSE.txt": "/cowin-slots/static/js/2.5a52ed18.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b03ef81c.js",
+    "static/js/2.5a52ed18.chunk.js",
+    "static/css/main.d93e7a5a.chunk.css",
+    "static/js/main.b21a5600.chunk.js"
+  ]
+}
