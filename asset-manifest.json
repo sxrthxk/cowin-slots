@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cowin-slots/static/css/main.818c8d5d.chunk.css",
-    "main.js": "/cowin-slots/static/js/main.bb78d6c1.chunk.js",
-    "main.js.map": "/cowin-slots/static/js/main.bb78d6c1.chunk.js.map",
+    "main.js": "/cowin-slots/static/js/main.77080bc2.chunk.js",
+    "main.js.map": "/cowin-slots/static/js/main.77080bc2.chunk.js.map",
     "runtime-main.js": "/cowin-slots/static/js/runtime-main.b03ef81c.js",
     "runtime-main.js.map": "/cowin-slots/static/js/runtime-main.b03ef81c.js.map",
     "static/js/2.0f5951cb.chunk.js": "/cowin-slots/static/js/2.0f5951cb.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.b03ef81c.js",
     "static/js/2.0f5951cb.chunk.js",
     "static/css/main.818c8d5d.chunk.css",
-    "static/js/main.bb78d6c1.chunk.js"
+    "static/js/main.77080bc2.chunk.js"
   ]
 }
