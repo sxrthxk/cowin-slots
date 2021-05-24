@@ -86,12 +86,12 @@ function App() {
       )}
       {centerData.length ?
         (<Container className={classes.containerData}>
-          <Typography variant="h6">No Data Yet</Typography>
-          <Divider className={classes.divider} variant="fullWidth" />
+            <Divider className={classes.divider} variant="fullWidth" />
 
           {centerData.map((data) => (
             <>
               <CenterCard key={data.center_id} centerData={data} />
+            <Divider className={classes.divider} variant="fullWidth" />
             </>
           ))}
         </Container>)

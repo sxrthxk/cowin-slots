@@ -15,8 +15,10 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: 'border-box',
     backgroundColor: "white",
     padding: '20px',
+    paddingTop: '0px',
     paddingBottom: '0px',
     marginTop: "50px",
+    marginBottom: "50px",
     borderRadius: "20px",
     display: 'flex',
     flexDirection: 'column',
@@ -52,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     backgroundColor: 'black',
     // border: '2px solid black',
-    width: '20%',
+    width: '50%',
     margin: '20px'
   },
   card: {
@@ -60,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
     width: '90%',
     
     backgroundColor: '#424242',
-    marginBottom: '20px'
   },
   cardContent: {
     display: 'flex',
