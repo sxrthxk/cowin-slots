@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  [theme.breakpoints.down('md')]: {
+    backgroundColor: theme.palette.secondary.main,
+  },
   container: {
     boxSizing: 'border-box',
     backgroundColor: "white",
@@ -9,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '75%'
+    width: '85%'
   },
   containerData: {
     boxSizing: 'border-box',
@@ -23,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '75%'
+    width: '85%'
   },
   button: {
     margin: "20px"
