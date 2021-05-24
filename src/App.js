@@ -1,6 +1,6 @@
 import { Button, Container, Divider, Typography } from "@material-ui/core";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CenterCard from "./components/CenterCard";
 import PincodeForm from "./components/PincodeForm";
 import StateListForm from "./components/StateListForm";
@@ -89,16 +89,14 @@ function App() {
             <Divider className={classes.divider} variant="fullWidth" />
 
           {centerData.map((data) => (
-            <>
-              <CenterCard key={data.center_id} centerData={data} />
+            <React.Fragment  key={data.center_id}>
+              <CenterCard centerData={data} />
             <Divider className={classes.divider} variant="fullWidth" />
-            </>
+            </React.Fragment>
           ))}
         </Container>)
         :
-        (<Container className={classes.containerData}>
-          <Typography style={{margin: '20px'}}>No Data Available</Typography>
-        </Container>)
+        (null)
 
       }
     </div>
