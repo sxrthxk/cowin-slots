@@ -32,9 +32,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px'
   },
   select: {
-    boxSizing: 'border-box',
     width: "200px",
-     marginBottom: '20px'
+    marginBottom: '20px'
   },
   label: {
     position: "relative",

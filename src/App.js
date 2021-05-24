@@ -96,7 +96,10 @@ function App() {
           ))}
         </Container>)
         :
-        null
+        (<Container className={classes.containerData}>
+          <Typography style={{margin: '20px'}}>No Data Available</Typography>
+        </Container>)
+
       }
     </div>
   );

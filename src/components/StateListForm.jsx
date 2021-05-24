@@ -1,7 +1,8 @@
-import { Button, CircularProgress, FormControl, InputLabel, MenuItem, Select, Typography } from "@material-ui/core";
+import { Button, CircularProgress, FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useStyles from "../styles";
+import './styles.css';
 
 const StateListForm = ({setDistrictId}) => {
 
@@ -55,10 +56,10 @@ const StateListForm = ({setDistrictId}) => {
           Current State is another state that is init to 1 by default.
           OnChange function triggers state change which is utilized by 
           useEffect to re-run the fetch api and get new list of districts.*/}
-            <FormControl className={classes.select} variant="outlined">
-              <InputLabel id="select-state">State</InputLabel>
+            <FormControl variant="outlined">
+              <InputLabel className="select-class" id="select-state">State</InputLabel>
               <Select
-                
+                 className="select-class"
                 onChange={(e) => setCurrentStateId(e.target.value)}
                 label="State"
                 labelId="select-state"
@@ -74,9 +75,9 @@ const StateListForm = ({setDistrictId}) => {
             </FormControl>
             {currentStateId ? (
               <>
-              <FormControl className={classes.select} variant="outlined">
-              <InputLabel id="select-district">District</InputLabel>
-                <Select label="District"
+              <FormControl variant="outlined">
+              <InputLabel className="select-class" id="select-district">District</InputLabel>
+                <Select className="select-class" label="District"
                 labelId="select-district">
 
                   {districts.map((district) => {
