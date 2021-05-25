@@ -1,4 +1,4 @@
-import { Button, Container, Divider, Typography } from "@material-ui/core";
+import { Button, CircularProgress, Container, Divider, Typography } from "@material-ui/core";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CenterCard from "./components/CenterCard";
@@ -23,6 +23,7 @@ function App() {
   const [pincode, setPincode] = useState();
   const [districtId, setDistrictId] = useState();
   const [isLoading, setIsLoading] = useState(true)
+  const [showLoader, setShowLoader] = useState(true)
   const assignPincode = (p) => {
     setDistrictId(0);
     setPincode(p);
@@ -42,7 +43,7 @@ function App() {
       async function getData() {
         var response = await axios.get(url);
         setCenterData(response.data.centers);
-        setIsLoading(false)
+        setShowLoader(false)
       }
       getData();
     } else {
@@ -51,7 +52,8 @@ function App() {
       async function getData() {
         var response = await axios.get(url);
         setCenterData(response.data.centers);
-        setIsLoading(false)
+        setShowLoader(false)
+
 
       }
       getData();
@@ -72,7 +74,8 @@ function App() {
           >
             <Typography variant="caption">Get Slots by State List</Typography>
           </Button>
-          <PincodeForm setPincode={assignPincode} />
+          <PincodeForm setPincode={assignPincode} setLoad={setIsLoading} />
+
         </Container>
       ) : (
         <Container className={classes.container}>
@@ -84,11 +87,15 @@ function App() {
           >
             <Typography variant="caption">Get Slots by Pincode</Typography>
           </Button>
-          <StateListForm setDistrictId={assignDistrictId} />
+          <StateListForm setDistrictId={assignDistrictId} setLoad={setIsLoading} />
+
         </Container>
       )}
-      {!isLoading ? (
-        <Container className={classes.containerData}>
+      {!isLoading ? 
+      <Container className={classes.containerData}>
+      
+      {showLoader ? (<CircularProgress style={{margin: '20px'}} />) :
+      (<>
           <Divider className={classes.divider} variant="fullWidth" />
 
           {centerData.map((data) => (
@@ -97,8 +104,11 @@ function App() {
               <Divider className={classes.divider} variant="fullWidth" />
             </React.Fragment>
           ))}
+          </>
+      )}
         </Container>
-      ) : null}
+      
+      : null}
       {/* <footer>
         <Typography>
           Hosted with 💘 on gh-pages.{" "}

@@ -2,13 +2,14 @@ import { Button, TextField } from "@material-ui/core";
 import React, { useRef } from "react";
 import useStyles from "../styles";
 
-const PincodeForm = ({setPincode}) => {
+const PincodeForm = ({setPincode, setLoad}) => {
 
   const classes = useStyles();
   const pincodeInput = useRef(null);
 
   const pincodeSubmitHandler = (e) => {
     e.preventDefault();
+    setLoad(false);
     var pincode = pincodeInput.current.value;
 
     // CHECK PINCODE IS CORRECT

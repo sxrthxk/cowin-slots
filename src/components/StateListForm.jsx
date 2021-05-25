@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import useStyles from "../styles";
 import './styles.css';
 
-const StateListForm = ({setDistrictId}) => {
+const StateListForm = ({setDistrictId, setLoad}) => {
 
   const [states, setStates] = useState();
   const [loading, setLoading] = useState(true);
@@ -15,6 +15,7 @@ const StateListForm = ({setDistrictId}) => {
 
   const stateListSubmitHandler = (e) => {
     e.preventDefault();
+    setLoad(false)
     var districtId = e.target[2].value;
     setDistrictId(districtId)
   };
