@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/cowin-slots/static/css/main.bf8cf784.chunk.css",
-    "main.js": "/cowin-slots/static/js/main.bd0ab7c5.chunk.js",
-    "main.js.map": "/cowin-slots/static/js/main.bd0ab7c5.chunk.js.map",
+    "main.js": "/cowin-slots/static/js/main.a9e953c5.chunk.js",
+    "main.js.map": "/cowin-slots/static/js/main.a9e953c5.chunk.js.map",
     "runtime-main.js": "/cowin-slots/static/js/runtime-main.b03ef81c.js",
     "runtime-main.js.map": "/cowin-slots/static/js/runtime-main.b03ef81c.js.map",
-    "static/js/2.0f5951cb.chunk.js": "/cowin-slots/static/js/2.0f5951cb.chunk.js",
-    "static/js/2.0f5951cb.chunk.js.map": "/cowin-slots/static/js/2.0f5951cb.chunk.js.map",
+    "static/js/2.4cee0344.chunk.js": "/cowin-slots/static/js/2.4cee0344.chunk.js",
+    "static/js/2.4cee0344.chunk.js.map": "/cowin-slots/static/js/2.4cee0344.chunk.js.map",
     "index.html": "/cowin-slots/index.html",
     "static/css/main.bf8cf784.chunk.css.map": "/cowin-slots/static/css/main.bf8cf784.chunk.css.map",
-    "static/js/2.0f5951cb.chunk.js.LICENSE.txt": "/cowin-slots/static/js/2.0f5951cb.chunk.js.LICENSE.txt"
+    "static/js/2.4cee0344.chunk.js.LICENSE.txt": "/cowin-slots/static/js/2.4cee0344.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b03ef81c.js",
-    "static/js/2.0f5951cb.chunk.js",
+    "static/js/2.4cee0344.chunk.js",
     "static/css/main.bf8cf784.chunk.css",
-    "static/js/main.bd0ab7c5.chunk.js"
+    "static/js/main.a9e953c5.chunk.js"
   ]
 }
